@@ -27,11 +27,6 @@
     ACTION(float,           trkDxyError1,               ## __VA_ARGS__)     \
     ACTION(float,           trkDz1,                     ## __VA_ARGS__)     \
     ACTION(float,           trkDzError1,                ## __VA_ARGS__)     \
-    ACTION(bool,            trkFake,                    ## __VA_ARGS__)     \
-    ACTION(int32_t,         pfType,                     ## __VA_ARGS__)     \
-    ACTION(float,           pfCandPt,                   ## __VA_ARGS__)     \
-    ACTION(float,           pfEcal,                     ## __VA_ARGS__)     \
-    ACTION(float,           pfHcal,                     ## __VA_ARGS__)     \
 
 class tracks {
   public:
