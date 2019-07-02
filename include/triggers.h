@@ -6,6 +6,7 @@
 #include "TTree.h"
 
 #include <string>
+#include <unordered_map>
 #include <vector>
 
 #define B_ARR_TRG(ACTION, ...)                                              \
@@ -21,6 +22,9 @@ class triggers {
 
     int64_t size() const { return _count; }
 
+    template <typename T>
+    int32_t accept(T const& key) const;
+
     B_ARR_TRG(DECLPTR)
 
   private:
@@ -28,6 +32,7 @@ class triggers {
 
     int64_t _count;
     std::vector<std::string> _paths;
+    std::unordered_map<std::string, int32_t> _map;
 };
 
 #endif  /* TRIGGERS_H */
