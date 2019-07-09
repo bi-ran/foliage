@@ -24,6 +24,8 @@
     ACTION(sv<float>,       eleDz,                      ## __VA_ARGS__)     \
     ACTION(sv<float>,       eleD0Err,                   ## __VA_ARGS__)     \
     ACTION(sv<float>,       eleDzErr,                   ## __VA_ARGS__)     \
+    ACTION(sv<float>,       eleIP3D,                    ## __VA_ARGS__)     \
+    ACTION(sv<float>,       eleIP3DErr,                 ## __VA_ARGS__)     \
                                                                             \
     ACTION(sv<float>,       eleSCEn,                    ## __VA_ARGS__)     \
     ACTION(sv<float>,       eleESEn,                    ## __VA_ARGS__)     \
@@ -59,37 +61,6 @@
     ACTION(sv<float>,       elePFPhoIso,                ## __VA_ARGS__)     \
     ACTION(sv<float>,       elePFNeuIso,                ## __VA_ARGS__)     \
     ACTION(sv<float>,       elePFPUIso,                 ## __VA_ARGS__)     \
-                                                                            \
-    ACTION(sv<int>,         NEcalClusters,              ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleR9,                      ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleE3x3,                    ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleE5x5,                    ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleR9Full5x5,               ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleE3x3Full5x5,             ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleE5x5Full5x5,             ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSeedEn,                  ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSeedEta,                 ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSeedPhi,                 ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSeedCryEta,              ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSeedCryPhi,              ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSeedCryIeta,             ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSeedCryIphi,             ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSeedE3x3,                ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSeedE5x5,                ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSEE,                     ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSPP,                     ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSEP,                     ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSeedEMax,                ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSeedE2nd,                ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSeedETop,                ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSeedEBottom,             ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSeedELeft,               ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSeedERight,              ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSeedE2x5Max,             ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSeedE2x5Top,             ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSeedE2x5Bottom,          ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSeedE2x5Left,            ## __VA_ARGS__)     \
-    ACTION(sv<float>,       eleSeedE2x5Right,           ## __VA_ARGS__)     \
 
 #define B_VAL_ELE_GEN(ACTION, ...)                                          \
     ACTION(int32_t,         nMC,                        ## __VA_ARGS__)     \
