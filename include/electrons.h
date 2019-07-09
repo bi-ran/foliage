@@ -52,6 +52,7 @@
     ACTION(sv<int>,         eleTrkValidHits,            ## __VA_ARGS__)     \
     ACTION(sv<int>,         eleTrkLayers,               ## __VA_ARGS__)     \
     ACTION(sv<int>,         eleMissHits,                ## __VA_ARGS__)     \
+    ACTION(sv<int>,         eleConvVeto,                ## __VA_ARGS__)     \
     ACTION(sv<float>,       eledEtaAtVtx,               ## __VA_ARGS__)     \
     ACTION(sv<float>,       eledPhiAtVtx,               ## __VA_ARGS__)     \
     ACTION(sv<float>,       eledEtaSeedAtVtx,           ## __VA_ARGS__)     \
