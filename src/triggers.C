@@ -16,6 +16,11 @@ void triggers::read(TTree* t) {
     }
 }
 
+void triggers::reset() {
+    for (int64_t i = 0; i < _count; ++i)
+        accepts[i] = -1;
+}
+
 template <>
 int32_t triggers::accept<int64_t>(int64_t const& index) const {
     return accepts[index];

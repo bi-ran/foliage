@@ -22,6 +22,8 @@ class triggers {
 
     int64_t size() const { return _count; }
 
+    void reset();
+
     template <typename T>
     int32_t accept(T const& key) const;
 
