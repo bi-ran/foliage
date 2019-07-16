@@ -17,6 +17,8 @@
     ACTION(float,           jtpt,                       ## __VA_ARGS__)     \
     ACTION(float,           jteta,                      ## __VA_ARGS__)     \
     ACTION(float,           jtphi,                      ## __VA_ARGS__)     \
+    ACTION(float,           WTAeta,                     ## __VA_ARGS__)     \
+    ACTION(float,           WTAphi,                     ## __VA_ARGS__)     \
 
 #define B_ALL_JET_GEN(ACTION, ...)                                          \
     B_VAL_JET_GEN(ACTION,                               ## __VA_ARGS__)     \
@@ -29,6 +31,8 @@
     ACTION(float,           genpt,                      ## __VA_ARGS__)     \
     ACTION(float,           geneta,                     ## __VA_ARGS__)     \
     ACTION(float,           genphi,                     ## __VA_ARGS__)     \
+    ACTION(float,           WTAgeneta,                  ## __VA_ARGS__)     \
+    ACTION(float,           WTAgenphi,                  ## __VA_ARGS__)     \
 
 class jets {
   public:
