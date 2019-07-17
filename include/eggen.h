@@ -32,6 +32,8 @@
                                                                             \
     ACTION(sv<float>,       mcCalIsoDR04,               ## __VA_ARGS__)     \
     ACTION(sv<float>,       mcTrkIsoDR04,               ## __VA_ARGS__)     \
+                                                                            \
+    ACTION(sv<int>,         pho_genMatchedIndex,        ## __VA_ARGS__)     \
 
 class eggen {
   public:
