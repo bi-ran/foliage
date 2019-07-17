@@ -8,7 +8,6 @@
 #include <vector>
 
 #define B_VAL_ELE_RECO(ACTION, ...)                                         \
-    ACTION(float,           rho,                        ## __VA_ARGS__)     \
     ACTION(int32_t,         nEle,                       ## __VA_ARGS__)     \
 
 #define B_VEC_ELE_RECO(ACTION, ...)                                         \
