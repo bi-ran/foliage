@@ -34,49 +34,19 @@
     ACTION(sv<float>,       pho_swissCrx,               ## __VA_ARGS__)     \
     ACTION(sv<float>,       pho_seedTime,               ## __VA_ARGS__)     \
 
-#define B_VAL_PHO_GEN(ACTION, ...)                                          \
-    ACTION(int32_t,         nMC,                        ## __VA_ARGS__)     \
-
-#define B_VEC_PHO_GEN(ACTION, ...)                                          \
-    ACTION(sv<float>,       mcVtx_x,                    ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcVtx_y,                    ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcVtx_z,                    ## __VA_ARGS__)     \
-                                                                            \
-    ACTION(sv<int>,         mcPID,                      ## __VA_ARGS__)     \
-    ACTION(sv<int>,         mcStatus,                   ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcPt,                       ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcEta,                      ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcPhi,                      ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcE,                        ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcEt,                       ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcMass,                     ## __VA_ARGS__)     \
-                                                                            \
-    ACTION(sv<int>,         mcMomPID,                   ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcMomPt,                    ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcMomEta,                   ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcMomPhi,                   ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcMomMass,                  ## __VA_ARGS__)     \
-                                                                            \
-    ACTION(sv<float>,       mcCalIsoDR04,               ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcTrkIsoDR04,               ## __VA_ARGS__)     \
-
 class photons {
   public:
-    photons(TTree* t, bool gen);
+    photons(TTree* t);
 
     photons(photons const&) = delete;
     photons& operator=(photons const&) = delete;
     ~photons() = default;
 
-    void read(TTree* t);
-
     B_VAL_PHO_RECO(DECLVAL)
-    B_VAL_PHO_GEN(DECLVAL)
     B_VEC_PHO_RECO(DECLPTR)
-    B_VEC_PHO_GEN(DECLPTR)
 
   private:
-    bool _gen;
+    void read(TTree* t);
 };
 
 #endif  /* PHOTONS_H */

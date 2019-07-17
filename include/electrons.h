@@ -59,52 +59,19 @@
     ACTION(sv<float>,       elePFNeuIso,                ## __VA_ARGS__)     \
     ACTION(sv<float>,       elePFPUIso,                 ## __VA_ARGS__)     \
 
-#define B_VAL_ELE_GEN(ACTION, ...)                                          \
-    ACTION(int32_t,         nMC,                        ## __VA_ARGS__)     \
-
-#define B_VEC_ELE_GEN(ACTION, ...)                                          \
-    ACTION(sv<float>,       mcVtx_x,                    ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcVtx_y,                    ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcVtx_z,                    ## __VA_ARGS__)     \
-                                                                            \
-    ACTION(sv<int>,         mcPID,                      ## __VA_ARGS__)     \
-    ACTION(sv<int>,         mcStatus,                   ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcPt,                       ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcEta,                      ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcPhi,                      ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcE,                        ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcEt,                       ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcMass,                     ## __VA_ARGS__)     \
-                                                                            \
-    ACTION(sv<int>,         mcParentage,                ## __VA_ARGS__)     \
-    ACTION(sv<int>,         mcMomPID,                   ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcMomPt,                    ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcMomEta,                   ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcMomPhi,                   ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcMomMass,                  ## __VA_ARGS__)     \
-                                                                            \
-    ACTION(sv<float>,       mcCalIsoDR03,               ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcCalIsoDR04,               ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcTrkIsoDR03,               ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcTrkIsoDR04,               ## __VA_ARGS__)     \
-
 class electrons {
   public:
-    electrons(TTree* t, bool gen);
+    electrons(TTree* t);
 
     electrons(electrons const&) = delete;
     electrons& operator=(electrons const&) = delete;
     ~electrons() = default;
 
     B_VAL_ELE_RECO(DECLVAL)
-    B_VAL_ELE_GEN(DECLVAL)
     B_VEC_ELE_RECO(DECLPTR)
-    B_VEC_ELE_GEN(DECLPTR)
 
   private:
     void read(TTree* t);
-
-    bool _gen;
 };
 
 #endif  /* ELECTRONS_H */
