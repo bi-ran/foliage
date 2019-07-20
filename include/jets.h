@@ -28,11 +28,18 @@
     ACTION(int,             ngen,                       ## __VA_ARGS__)     \
 
 #define B_ARR_JET_GEN(ACTION, ...)                                          \
+    ACTION(int32_t,         gensubid,                   ## __VA_ARGS__)     \
     ACTION(float,           genpt,                      ## __VA_ARGS__)     \
     ACTION(float,           geneta,                     ## __VA_ARGS__)     \
     ACTION(float,           genphi,                     ## __VA_ARGS__)     \
     ACTION(float,           WTAgeneta,                  ## __VA_ARGS__)     \
     ACTION(float,           WTAgenphi,                  ## __VA_ARGS__)     \
+
+#define B_ARR_JET_REF(ACTION, ...)                                          \
+    ACTION(int32_t,         subid,                      ## __VA_ARGS__)     \
+    ACTION(float,           refpt,                      ## __VA_ARGS__)     \
+    ACTION(float,           refeta,                     ## __VA_ARGS__)     \
+    ACTION(float,           refphi,                     ## __VA_ARGS__)     \
 
 class jets {
   public:
@@ -48,6 +55,7 @@ class jets {
     B_VAL_JET_GEN(DECLVAL)
     B_ARR_JET_RECO(DECLPTR)
     B_ARR_JET_GEN(DECLPTR)
+    B_ARR_JET_REF(DECLPTR)
 
   private:
     bool _gen;

@@ -8,6 +8,7 @@ jets::jets(TTree* t, bool gen, int64_t size)
     if (_gen) {
         B_VAL_JET_GEN(SETZERO)
         B_ARR_JET_GEN(ALLOCARR, size)
+        B_ARR_JET_REF(ALLOCARR, size)
     }
 
     read(t);
@@ -20,5 +21,6 @@ void jets::read(TTree* t) {
     if (_gen) {
         B_VAL_JET_GEN(SETVALADDR, t)
         B_ARR_JET_GEN(SETPTRADDR, t)
+        B_ARR_JET_REF(SETPTRADDR, t)
     }
 }
