@@ -24,9 +24,9 @@
     ACTION(sv<float>,       phoR9_2012,                 ## __VA_ARGS__)     \
     ACTION(sv<float>,       phoSigmaIEtaIEta_2012,      ## __VA_ARGS__)     \
                                                                             \
-    ACTION(sv<float>,       pho_ecalClusterIsoR4,       ## __VA_ARGS__)     \
-    ACTION(sv<float>,       pho_hcalRechitIsoR4,        ## __VA_ARGS__)     \
-    ACTION(sv<float>,       pho_trackIsoR4PtCut20,      ## __VA_ARGS__)     \
+    ACTION(sv<float>,       pho_ecalClusterIsoR3,       ## __VA_ARGS__)     \
+    ACTION(sv<float>,       pho_hcalRechitIsoR3,        ## __VA_ARGS__)     \
+    ACTION(sv<float>,       pho_trackIsoR3PtCut20,      ## __VA_ARGS__)     \
                                                                             \
     ACTION(sv<float>,       pho_swissCrx,               ## __VA_ARGS__)     \
     ACTION(sv<float>,       pho_seedTime,               ## __VA_ARGS__)     \
