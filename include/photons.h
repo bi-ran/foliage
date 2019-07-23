@@ -8,9 +8,6 @@
 #include <vector>
 
 #define B_VAL_PHO_RECO(ACTION, ...)                                         \
-    ACTION(uint32_t,        run,                        ## __VA_ARGS__)     \
-    ACTION(uint32_t,        lumis,                      ## __VA_ARGS__)     \
-                                                                            \
     ACTION(int32_t,         nPho,                       ## __VA_ARGS__)     \
 
 #define B_VEC_PHO_RECO(ACTION, ...)                                         \

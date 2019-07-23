@@ -11,18 +11,12 @@
     ACTION(int32_t,         nMC,                        ## __VA_ARGS__)     \
 
 #define B_VEC_EGM_GEN(ACTION, ...)                                          \
-    ACTION(sv<float>,       mcVtx_x,                    ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcVtx_y,                    ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcVtx_z,                    ## __VA_ARGS__)     \
-                                                                            \
     ACTION(sv<int>,         mcPID,                      ## __VA_ARGS__)     \
     ACTION(sv<int>,         mcStatus,                   ## __VA_ARGS__)     \
+    ACTION(sv<float>,       mcEt,                       ## __VA_ARGS__)     \
     ACTION(sv<float>,       mcPt,                       ## __VA_ARGS__)     \
     ACTION(sv<float>,       mcEta,                      ## __VA_ARGS__)     \
     ACTION(sv<float>,       mcPhi,                      ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcE,                        ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcEt,                       ## __VA_ARGS__)     \
-    ACTION(sv<float>,       mcMass,                     ## __VA_ARGS__)     \
                                                                             \
     ACTION(sv<int>,         mcMomPID,                   ## __VA_ARGS__)     \
     ACTION(sv<float>,       mcMomPt,                    ## __VA_ARGS__)     \
