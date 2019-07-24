@@ -8,10 +8,12 @@
 #include <vector>
 
 #define B_VAL_EVT_RECO(ACTION, ...)                                         \
+    ACTION(float,           vz,                         ## __VA_ARGS__)     \
     ACTION(int32_t,         hiBin,                      ## __VA_ARGS__)     \
     ACTION(float,           hiHF,                       ## __VA_ARGS__)     \
 
 #define B_VAL_EVT_GEN(ACTION, ...)                                          \
+    ACTION(float,           pthat,                      ## __VA_ARGS__)     \
     ACTION(float,           Ncoll,                      ## __VA_ARGS__)     \
 
 class event {
