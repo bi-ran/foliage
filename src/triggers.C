@@ -23,7 +23,7 @@ void triggers::reset() {
 
 int32_t triggers::accept() const {
     for (int64_t i = 0; i < _count; ++i)
-        if (accepts[i]) { return 1; }
+        if (accepts[i] == 1) { return 1; }
 
     return 0;
 }
