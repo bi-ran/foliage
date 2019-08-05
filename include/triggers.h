@@ -24,6 +24,8 @@ class triggers {
 
     void reset();
 
+    int32_t accept() const;
+
     template <typename T>
     int32_t accept(T const& key) const;
 

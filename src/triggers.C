@@ -21,6 +21,13 @@ void triggers::reset() {
         accepts[i] = -1;
 }
 
+int32_t triggers::accept() const {
+    for (int64_t i = 0; i < _count; ++i)
+        if (accepts[i]) { return 1; }
+
+    return 0;
+}
+
 template <>
 int32_t triggers::accept<int64_t>(int64_t const& index) const {
     return accepts[index];
