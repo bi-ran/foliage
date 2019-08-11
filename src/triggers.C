@@ -1,11 +1,9 @@
 #include "../include/triggers.h"
 
-triggers::triggers(TTree* t, std::vector<std::string> const& paths)
-        : accepts(new int32_t[paths.size()]),
-          _count(static_cast<int64_t>(paths.size())),
-          _paths(paths) {
-    if (t != nullptr) { read(t); }
-}
+triggers::triggers(std::vector<std::string> const& paths)
+    : accepts(new int32_t[paths.size()]),
+      _count(static_cast<int64_t>(paths.size())),
+      _paths(paths) { }
 
 void triggers::read(TTree* t) {
     for (int64_t i = 0; i < static_cast<int64_t>(_paths.size()); ++i) {

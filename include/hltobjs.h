@@ -1,6 +1,7 @@
-#ifndef HLTOBJECTS_H
-#define HLTOBJECTS_H
+#ifndef HLTOBJS_H
+#define HLTOBJS_H
 
+#include "tree.h"
 #include "foliage.h"
 
 #include "TTree.h"
@@ -14,17 +15,16 @@
     ACTION(sv<double>,      phi,                        ## __VA_ARGS__)     \
     ACTION(sv<double>,      mass,                       ## __VA_ARGS__)     \
 
-class hltobjects {
+class hltobjs : tree {
   public:
-    hltobjects(TTree* t);
-
-    hltobjects(hltobjects const&) = delete;
-    hltobjects& operator=(hltobjects const&) = delete;
-    ~hltobjects() = default;
+    hltobjs() = default;
+    hltobjs(hltobjs const&) = delete;
+    hltobjs& operator=(hltobjs const&) = delete;
+    ~hltobjs() = default;
 
     void read(TTree* t);
 
     B_VEC_HLT(DECLPTR)
 };
 
-#endif  /* HLTOBJECTS_H */
+#endif  /* HLTOBJS_H */

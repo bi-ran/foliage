@@ -1,6 +1,7 @@
 #ifndef ELECTRONS_H
 #define ELECTRONS_H
 
+#include "tree.h"
 #include "foliage.h"
 
 #include "TTree.h"
@@ -37,19 +38,17 @@
     ACTION(sv<float>,       elePFPhoIso,                ## __VA_ARGS__)     \
     ACTION(sv<float>,       elePFNeuIso,                ## __VA_ARGS__)     \
 
-class electrons {
+class electrons : tree {
   public:
-    electrons(TTree* t);
-
+    electrons() = default;
     electrons(electrons const&) = delete;
     electrons& operator=(electrons const&) = delete;
     ~electrons() = default;
 
+    void read(TTree* t);
+
     B_VAL_ELE_RECO(DECLVAL)
     B_VEC_ELE_RECO(DECLPTR)
-
-  private:
-    void read(TTree* t);
 };
 
 #endif  /* ELECTRONS_H */

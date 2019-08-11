@@ -1,6 +1,7 @@
-#ifndef L1OBJECTS_H
-#define L1OBJECTS_H
+#ifndef L1OBJS_H
+#define L1OBJS_H
 
+#include "tree.h"
 #include "foliage.h"
 
 #include "TTree.h"
@@ -17,13 +18,12 @@
     ACTION(sv<float>,       egEta,                      ## __VA_ARGS__)     \
     ACTION(sv<float>,       egPhi,                      ## __VA_ARGS__)     \
 
-class l1objects {
+class l1objs : tree {
   public:
-    l1objects(TTree* t);
-
-    l1objects(l1objects const&) = delete;
-    l1objects& operator=(l1objects const&) = delete;
-    ~l1objects() = default;
+    l1objs() = default;
+    l1objs(l1objs const&) = delete;
+    l1objs& operator=(l1objs const&) = delete;
+    ~l1objs() = default;
 
     void read(TTree* t);
 
@@ -31,4 +31,4 @@ class l1objects {
     B_VEC_L1O(DECLPTR)
 };
 
-#endif  /* L1OBJECTS_H */
+#endif  /* L1OBJS_H */

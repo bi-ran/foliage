@@ -1,6 +1,7 @@
 #ifndef TRACKS_H
 #define TRACKS_H
 
+#include "tree.h"
 #include "foliage.h"
 
 #include "TTree.h"
@@ -28,10 +29,9 @@
     ACTION(float,           trkDz1,                     ## __VA_ARGS__)     \
     ACTION(float,           trkDzError1,                ## __VA_ARGS__)     \
 
-class tracks {
+class tracks : tree {
   public:
-    tracks(TTree* t, int64_t size);
-
+    tracks(int64_t size);
     tracks(tracks const&) = delete;
     tracks& operator=(tracks const&) = delete;
     ~tracks() = default;
@@ -42,6 +42,7 @@ class tracks {
     B_ARR_TRK_RECO(DECLPTR)
 
   private:
+    int64_t _size;
 };
 
 #endif  /* TRACKS_H */

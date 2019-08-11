@@ -1,6 +1,7 @@
 #ifndef JETS_H
 #define JETS_H
 
+#include "tree.h"
 #include "foliage.h"
 
 #include "TTree.h"
@@ -41,10 +42,9 @@
     ACTION(float,           refeta,                     ## __VA_ARGS__)     \
     ACTION(float,           refphi,                     ## __VA_ARGS__)     \
 
-class jets {
+class jets : tree {
   public:
-    jets(TTree* t, bool gen, int64_t size);
-
+    jets(bool gen, int64_t size);
     jets(jets const&) = delete;
     jets& operator=(jets const&) = delete;
     ~jets() = default;
@@ -59,6 +59,7 @@ class jets {
 
   private:
     bool _gen;
+    int64_t _size;
 };
 
 #endif  /* JETS_H */

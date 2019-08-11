@@ -1,6 +1,7 @@
 #ifndef PHOTONS_H
 #define PHOTONS_H
 
+#include "tree.h"
 #include "foliage.h"
 
 #include "TTree.h"
@@ -31,19 +32,17 @@
     ACTION(sv<float>,       pho_swissCrx,               ## __VA_ARGS__)     \
     ACTION(sv<float>,       pho_seedTime,               ## __VA_ARGS__)     \
 
-class photons {
+class photons : tree {
   public:
-    photons(TTree* t);
-
+    photons() = default;
     photons(photons const&) = delete;
     photons& operator=(photons const&) = delete;
     ~photons() = default;
 
+    void read(TTree* t);
+
     B_VAL_PHO_RECO(DECLVAL)
     B_VEC_PHO_RECO(DECLPTR)
-
-  private:
-    void read(TTree* t);
 };
 
 #endif  /* PHOTONS_H */

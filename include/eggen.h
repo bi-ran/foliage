@@ -1,6 +1,7 @@
 #ifndef EGGEN_H
 #define EGGEN_H
 
+#include "tree.h"
 #include "foliage.h"
 
 #include "TTree.h"
@@ -29,21 +30,20 @@
                                                                             \
     ACTION(sv<int>,         pho_genMatchedIndex,        ## __VA_ARGS__)     \
 
-class eggen {
+class eggen : tree {
   public:
-    eggen(TTree* t, bool gen);
-
+    eggen(bool gen);
     eggen(eggen const&) = delete;
     eggen& operator=(eggen const&) = delete;
     ~eggen() = default;
+
+    void read(TTree* t);
 
     B_VAL_EGM_GEN(DECLVAL)
     B_VEC_EGM_GEN(DECLPTR)
 
   private:
     bool _gen;
-
-    void read(TTree* t);
 };
 
 #endif  /* EGGEN_H */
